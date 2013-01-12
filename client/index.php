@@ -14,6 +14,14 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
 * Should work in latest versions of Firefox, Chrome, Safari, Opera, Safari Mobile and Firefox for Android
 
  -->
+
+<?php
+
+#Used to support multilanguage
+include("common.php");
+
+?>
+
 <html lang="en">
 	<head>
         <meta charset="utf-8">
@@ -21,12 +29,12 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
         <link rel="icon" type="image/png" href="img/common/favicon.png">
-        <meta property="og:title" content="BrowserQuest">
+        <meta property="og:title" content="<?php echo $lang['GAME_TITLE'] ?>">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="http://browserquest.mozilla.org/">
+        <meta property="og:url" content="http://ufbteam.com:8051/">
         <meta property="og:image" content="http://browserquest.mozilla.org/img/common/promo-title.jpg">
-        <meta property="og:site_name" content="BrowserQuest">
-        <meta property="og:description" content="Play Mozilla's BrowserQuest, an HTML5 massively multiplayer game demo powered by WebSockets!">
+        <meta property="og:site_name" content="<?php echo $lang['GAME_NAME'] ?>">
+        <meta property="og:description" content="<?php echo $lang['GAME_DESC'] ?>">
         <link rel="stylesheet" href="css/main.css" type="text/css">
         <link rel="stylesheet" href="css/achievements.css" type="text/css">
 
@@ -51,7 +59,7 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
                 </script>
         <![endif]-->
         <script src="js/detect.js" type="text/javascript"></script>
-        <title>BrowserQuest</title>
+        <title><?php echo $lang['GAME_NAME'] ?></title>
 	</head>
     <!--[if lt IE 9]>
 	<body class="intro upscaled">
@@ -59,10 +67,10 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
 	<body class="intro">
 	    <noscript>
 	       <div class="alert">
-	           You need to enable JavaScript to play BrowserQuest.
+	           You need to enable JavaScript to play UFBWorld... Visit http://ufbteam.com if you need help..
 	       </div>
 	    </noscript>
-	    <a id="moztab" class="clickable" target="_blank" href="http://www.mozilla.org/"></a>
+	    <a id="moztab" class="clickable" target="_blank" href="http://www.ufbteam.com/"></a>
 	    <div id="intro">
 	        <h1 id="logo">
 	           <span id="logosparks">
@@ -118,7 +126,7 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
                              <img src="img/common/spinner.gif" alt="">
                          </div>
                          <div id="create-new">
-                            <span><span>or</span> reset your character</span>
+                            <span><span><?php echo $lang['OR'] ?></span> <?php echo $lang['CHAR_RESET'] ?></span>
                          </div>
                     </article>
                     <article id="confirmation">
@@ -170,12 +178,12 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
         	            <h1>
          	               <span class="left-ornament"></span>
          	               <span class="title">
-         	                   What is BrowserQuest?
+         	                   What is <?php echo $lang['GAME_NAME'] ?>?
          	               </span>
          	               <span class="right-ornament"></span>
                         </h1>
                         <p id="game-desc">
-                            BrowserQuest is a multiplayer game inviting you to explore a
+                            UFBWorld is a multiplayer game inviting you to explore a
                             world of adventure from your Web browser.
                         </p>
                         <div class="left">

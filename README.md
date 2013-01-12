@@ -1,4 +1,6 @@
+
 BrowserQuest http://ufbteam.com fork
+====================================
 
 The test server is available on http://ufbteam.com:8050
 
