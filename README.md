@@ -7,6 +7,14 @@ The test server is available on http://ufbteam.com:8050
 If you are interested in the development please contact us on http://ufbteam.com
 
 
+Plan:
+-Customize the client [On going]
+-Fix some stuff (like zoom, ...)
+-Move data from Localstorage to server
+-Add inventory
+-Add XP
+-Add Advance quest Management
+
 BrowserQuest
 ============
 

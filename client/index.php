@@ -334,8 +334,8 @@ include("common.php");
 		<footer>
 		    <div id="sharing" class="clickable">
 		      Share this on 
-              <a href="http://twitter.com/share?url=http%3A%2F%2Fbrowserquest.mozilla.org&amp;text=Mozilla%27s%20BrowserQuest%3A%20HTML5%20massively%20multiplayer%20adventure%20game%20%23demo%20%23websockets&amp;related=glecollinet:Creators%20of%20BrowserQuest%2Cwhatthefranck" class="twitter"></a>
-              <a href="http://www.facebook.com/share.php?u=http://browserquest.mozilla.org/" class="facebook"></a>
+              <a href="http://twitter.com/share?url=http%3A%2F%2Fufbworld.ufbteam.com&amp;text=Massively%20multiplayer%20adventure%20game&amp;related=glecollinet:Creators%20of%20BrowserQuest%2Cwhatthefranck" class="twitter"></a>
+              <a href="http://www.facebook.com/share.php?u=http://ufbworld.ufbteam.com/" class="facebook"></a>
 		    </div>
 		    <div id="privacy-link" class="clickable">
 		      <span class="dash">&ndash;</span> <span id="toggle-legal">Privacy</span>
