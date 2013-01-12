@@ -1,3 +1,10 @@
+BrowserQuest http://ufbteam.com fork
+
+The test server is available on http://ufbteam.com:8050
+
+If you are interested in the development please contact us on http://ufbteam.com
+
+
 BrowserQuest
 ============
 
