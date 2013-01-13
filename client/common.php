@@ -13,7 +13,7 @@ Changelog:
 session_start();
 header('Cache-control: private'); // IE 6 FIX
 
-if(isSet($_GET['lang']))
+/*if(isSet($_GET['lang']))
 {
 $lang = $_GET['lang'];
 
@@ -33,7 +33,9 @@ $lang = $_COOKIE['lang'];
 else
 {
 $lang = 'en';
-}
+}*/
+
+$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
 switch ($lang) {
   case 'en':
@@ -41,7 +43,7 @@ switch ($lang) {
   break;
 
   case 'fr':
-  $lang_file = 'lang.de.php';
+  $lang_file = 'lang.fr.php';
   break;
 
   default:
