@@ -262,7 +262,8 @@ footer, header, hgroup, menu, nav, section {
     #toggle-legal, #legal-link a {padding:0 10px;}
     
     #createcharacter form {position:relative;}
-    
+    #registercharacter form {position:relative;}    
+
     #name-tooltip {width:400px;height:30px;padding:10px 0;font-size:20px;background:#373737;position:absolute;left:50%;margin-left:-200px;color:#fff;border-radius:8px;line-height:30px;top:-40px;opacity:0;-moz-transition:0.25s opacity ease;-webkit-transition:0.25s opacity ease;-o-transition:0.25s opacity ease;-ms-transition:0.25s opacity ease;transition:0.25s opacity ease;pointer-events:none;}
     #name-tooltip:after {content:url('../img/common/arrow.png');width:28px;height:16px;position:absolute;bottom:-8px;left:50%;margin-left:-14px;}
     #name-tooltip.visible {opacity:.9;}
@@ -278,8 +279,8 @@ footer, header, hgroup, menu, nav, section {
     .animate .parchment-left {-moz-animation:parchleft 1s ease 1;-webkit-animation:parchleft 1s ease 1;-o-animation:parchleft 1s ease 1;-ms-animation:parchleft 1s ease 1;animation:parchleft 1s ease 1;}
     .animate .parchment-right {-moz-animation:parchright 1s ease 1;-webkit-animation:parchright 1s ease 1;-o-animation:parchright 1s ease 1;-ms-animation:parchright 1s ease 1;animation:parchright 1s ease 1;}
 
-    #credits, #createcharacter, #loadcharacter, #confirmation, #death, #error, #about, #legal {opacity:0;pointer-events:none;-moz-transition:none;-webkit-transition:none;-o-transition:none;-ms-transition:none;transition:none;}
-    .credits #credits, .createcharacter #createcharacter, .loadcharacter #loadcharacter, .confirmation #confirmation, .death #death, .error #error, .about #about, .legal #legal {opacity:1;pointer-events:auto;-moz-transition:0.5s opacity linear;-webkit-transition:0.5s opacity linear;-o-transition:0.5s opacity linear;-ms-transition:0.5s opacity linear;transition:0.5s opacity linear;}
+    #credits, #createcharacter, #registercharacter, #loadcharacter, #confirmation, #death, #error, #about, #legal {opacity:0;pointer-events:none;-moz-transition:none;-webkit-transition:none;-o-transition:none;-ms-transition:none;transition:none;}
+    .credits #credits, .createcharacter #createcharacter, .registercharacter #registercharacter, .loadcharacter #loadcharacter, .confirmation #confirmation, .death #death, .error #error, .about #about, .legal #legal {opacity:1;pointer-events:auto;-moz-transition:0.5s opacity linear;-webkit-transition:0.5s opacity linear;-o-transition:0.5s opacity linear;-ms-transition:0.5s opacity linear;transition:0.5s opacity linear;}
 
 /* States & Transitions */
 
@@ -287,7 +288,7 @@ footer, header, hgroup, menu, nav, section {
     #mask, #logo, #parchment {opacity:0;}
     .intro #logo, .intro #parchment {opacity:1;}
 
-    .game #confirmation, .game #loadcharacter, .game #createcharacter, .game #error {display:none;}
+    .game #confirmation, .game #loadcharacter, .game #createcharacter, .game #registercharacter, .game #error {display:none;}
 
     .game #parchment {z-index:0;-moz-transition:0.5s opacity linear 0.5s, 0s z-index linear 1s;-webkit-transition:0.5s opacity linear 0.5s, 0s z-index linear 1s;-o-transition:0.5s opacity linear 0.5s, 0s z-index linear 1s;-ms-transition:0.5s opacity linear 0.5s, 0s z-index linear 1s;transition:0.5s opacity linear 0.5s, 0s z-index linear 1s;top:50%;}
     .game #credits, .game #death, .game #about {opacity:0;-moz-transition:0s opacity linear 0s;-webkit-transition:0s opacity linear 0s;-o-transition:0s opacity linear 0s;-ms-transition:0s opacity linear 0s;transition:0s opacity linear 0s;}
@@ -495,6 +496,8 @@ footer, header, hgroup, menu, nav, section {
         .ribbon .bottom {width:100%;height:66px;background-position:-1143px -555px;}
         .ribbon:hover .top {height:30px;}
         .ribbon:hover .bottom {background-position:-1197px -555px;}
+	
+	#registercharacter .ribbon {right:30px;top:12px;}
         #createcharacter .ribbon {right:30px;top:12px;}
         #loadcharacter .ribbon {right:148px;top:-13px;}
         
@@ -657,6 +660,8 @@ footer, header, hgroup, menu, nav, section {
         .ribbon .bottom {width:100%;height:44px;background-position:-762px -370px;}
         .ribbon:hover .top {height:20px;}
         .ribbon:hover .bottom {background-position:-798px -370px;}
+
+	#registercharacter .ribbon {right:20px;top:8px;}
         #createcharacter .ribbon {right:20px;top:8px;}
         #loadcharacter .ribbon {right:99px;top:-8px;}
         
@@ -825,6 +830,8 @@ footer, header, hgroup, menu, nav, section {
         .ribbon .bottom {width:100%;height:22px;background-position:-381px -185px;}
         .ribbon:hover .top {height:10px;}
         .ribbon:hover .bottom {background-position:-399px -185px;}
+
+	#registercharacter .ribbon {right:10px;top:4px;}
         #createcharacter .ribbon {right:10px;top:4px;}
         #loadcharacter .ribbon {right:50px;top:4px;}
         
@@ -941,7 +948,7 @@ footer, header, hgroup, menu, nav, section {
         .game #container {display:block;padding:0;}
         #mask, #fade {display:none;}
         .game.death #parchment {display:block;}
-        .game .createcharacter #createcharacter, .game .loadcharacter #loadcharacter, .game .confirmation #confirmation, .game .error #error, .game .legal #legal {display:none;}
+        .game .createcharacter #createcharacter, .registercharacter #registercharacter, .game .loadcharacter #loadcharacter, .game .confirmation #confirmation, .game .error #error, .game .legal #legal {display:none;}
         
 		.ribbon {display:none;}
         
@@ -985,14 +992,14 @@ footer, header, hgroup, menu, nav, section {
 		
 		#parchment.animate {-moz-animation:none;-webkit-animation:none;-o-animation:none;-webkit-animation:none;}
 		
-		#loadcharacter, #confirmation, #createcharacter, #error, #legal {display:none;margin-top:0;margin-left:0;left:0;width:auto;}
-		.loadcharacter #loadcharacter, .confirmation #confirmation, .createcharacter #createcharacter, .error #error, .legal #legal {display:block;width:100%;}
+		#loadcharacter, #confirmation, #createcharacter, #registercharacter, #error, #legal {display:none;margin-top:0;margin-left:0;left:0;width:auto;}
+		.loadcharacter #loadcharacter, .confirmation #confirmation, .createcharacter #createcharacter, .registercharacter #registercharacter, .error #error, .legal #legal {display:block;width:100%;}
 		
 		#loadcharacter h1, #confirmation h1, #error h1, #legal h1 {font-size:12px;font-weight:normal;}
 		
 		#loadcharacter, #confirmation, #error, #legal {height:auto;}
 	
-	    #loadcharacter h1, #confirmation h1, #createcharacter h1, #error h1, #legal h1 {font-size:12px;}
+	    #loadcharacter h1, #confirmation h1, #createcharacter h1, #registercharacter h1, #error h1, #legal h1 {font-size:12px;}
 	    #createcharacter{padding-bottom:20px;}
 		#playername {font-size:20px;margin:10px 0px;}
 		#create-new {margin:20px 0px;font-size:16px;}
@@ -1109,7 +1116,7 @@ footer, header, hgroup, menu, nav, section {
 /* Workarounds for opera's lack of pointer-events support */
 
     .opera.intro #bubbles, .opera.intro #canvas, .opera.intro #container { z-index: -30000;}
-    .opera .credits #credits, .opera .createcharacter #createcharacter, .opera .loadcharacter #loadcharacter, .opera .confirmation #confirmation, .opera .death #death, 
+    .opera .credits #credits, .opera .createcharacter #createcharacter, .opera .registercharacter #registercharacter, .opera .loadcharacter #loadcharacter, .opera .confirmation #confirmation, .opera .death #death, 
     .opera .error #error, .opera .about #about, .opera .legal #legal { z-index: 30000; }
     .opera #instructions, .opera #achievements { z-index: -30000;}
     .opera #achievements.active, .opera #instructions.active { z-index: 30000;}
