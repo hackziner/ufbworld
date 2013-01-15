@@ -67,7 +67,7 @@ include("common.php");
 	<body class="intro">
 	    <noscript>
 	       <div class="alert">
-	           You need to enable JavaScript to play UFBWorld... Visit http://ufbteam.com if you need help..
+		   <?php echo $lang['ENABLE_JAVASCRIPT'] ?>
 	       </div>
 	    </noscript>
 	    <a id="moztab" class="clickable" target="_blank" href="http://www.ufbteam.com/"></a>
@@ -79,7 +79,7 @@ include("common.php");
 	        </h1>
 	        <article id="portrait">
 	            <p>
-	               Please rotate your device to landscape mode
+		       <?php echo $lang['ROTATE_DEVICE'] ?>
 	            </p>
 	            <div id="tilt"></div>
 	        </article>
@@ -97,14 +97,15 @@ include("common.php");
                          </div>
 
                          <form action="none" method="get" accept-charset="utf-8">
-                             <label id="name-tooltip" for="player">Try to think of a cool nickname!</label>
                              <input type="text" id="nameinput" class="stroke" name="player-name" placeholder="Name your character" maxlength="15" autofocus>
-			     <input type="password" id="passwordinput" class="stroke" name="player-password" placeholder="Password" maxlength="15">
+			     <input type="password" id="passwordinput" class="stroke" name="player-password" placeholder="Password" maxlength="16">
                          </form>
                          <div class="play button disabled">
                              <div></div>
                              <img src="img/common/spinner.gif" alt="">
                          </div>
+
+
                          <div class="ribbon">
                             <div class="top"></div>
                             <div class="bottom"></div>
@@ -119,7 +120,7 @@ include("common.php");
                          <form action="none" method="get" accept-charset="utf-8">
                              <label id="name-tooltip" for="player">Try to think of a cool nickname!</label>
                              <input type="text" id="nameinput" class="stroke" name="player-name" placeholder="Name your character" maxlength="15" autofocus>
-                             <input type="password" id="passwordinput" class="stroke" name="player-password" placeholder="Password" maxlength="15">
+                             <input type="password" id="passwordinput" class="stroke" name="player-password" placeholder="Password" maxlength="16">
 			     <input type="text" id="emailinput" class="stroke" name="player-email" placeholder="Email" maxlength="64">
                          </form>
                          <div class="play button disabled">
