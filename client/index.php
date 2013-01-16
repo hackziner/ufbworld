@@ -104,40 +104,11 @@ include("common.php");
                              <div></div>
                              <img src="img/common/spinner.gif" alt="">
                          </div>
-
-
                          <div class="ribbon">
                             <div class="top"></div>
                             <div class="bottom"></div>
                          </div>
                     </article>
-                    <article id="registercharacter">
-                           <h1>
-                               <span class="left-ornament"></span>
-                               Register a new character
-                               <span class="right-ornament"></span>
-                         </h1>
-                         <form action="none" method="get" accept-charset="utf-8">
-                             <label id="name-tooltip" for="player">Try to think of a cool nickname!</label>
-                             <input type="text" id="nameinput" class="stroke" name="player-name" placeholder="Name your character" maxlength="15" autofocus>
-                             <input type="password" id="passwordinput" class="stroke" name="player-password" placeholder="Password" maxlength="16">
-			     <input type="text" id="emailinput" class="stroke" name="player-email" placeholder="Email" maxlength="64">
-                         </form>
-                         <div class="play button disabled">
-                             <div></div>
-                             <img src="img/common/spinner.gif" alt="">
-                         </div>
-                         <div class="play button disabled">
-                             <div></div>
-                             <img src="img/common/spinner.gif" alt="">
-                         </div>
-
-                         <div class="ribbon">
-                            <div class="top"></div>
-                            <div class="bottom"></div>
-                         </div>
-                    </article>
-
                     <article id="loadcharacter">
           	           <h1>
           	               <span class="left-ornament"></span>
