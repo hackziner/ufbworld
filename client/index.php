@@ -67,7 +67,7 @@ include("common.php");
 	<body class="intro">
 	    <noscript>
 	       <div class="alert">
-	           You need to enable JavaScript to play UFBWorld... Visit http://ufbteam.com if you need help..
+		   <?php echo $lang['ENABLE_JAVASCRIPT'] ?>
 	       </div>
 	    </noscript>
 	    <a id="moztab" class="clickable" target="_blank" href="http://www.ufbteam.com/"></a>
@@ -79,7 +79,7 @@ include("common.php");
 	        </h1>
 	        <article id="portrait">
 	            <p>
-	               Please rotate your device to landscape mode
+		       <?php echo $lang['ROTATE_DEVICE'] ?>
 	            </p>
 	            <div id="tilt"></div>
 	        </article>
@@ -95,9 +95,10 @@ include("common.php");
                          <div id="character" class="disabled">
                              <div></div>
                          </div>
+
                          <form action="none" method="get" accept-charset="utf-8">
-                             <label id="name-tooltip" for="player">Try to think of a cool nickname!</label>
                              <input type="text" id="nameinput" class="stroke" name="player-name" placeholder="Name your character" maxlength="15" autofocus>
+			     <input type="password" id="passwordinput" class="stroke" name="player-password" placeholder="Password" maxlength="16">
                          </form>
                          <div class="play button disabled">
                              <div></div>
@@ -171,7 +172,7 @@ include("common.php");
                            
                         </div>
 	                    <div id="close-credits">
-	                        <span>- click anywhere to close -</span>
+	                        <span><?php echo $lang['CLOSE_ANYWHERE'] ?></span>
                         </div>
     	            </article>
     	            <article id="about">
@@ -189,29 +190,29 @@ include("common.php");
                         <div class="left">
                             <div class="img"></div>
                             <p>
-                                This demo is powered by HTML5 and WebSockets, which allow for real-time gaming and apps on the Web.
+				<?php echo $lang['SUPPORTED_TECHNO'] ?>
                             </p>
                             <span class="link">
                                 <span class="ext-link"></span>
-                                <a target="_blank" class="clickable" href="http://hacks.mozilla.org/2012/03/browserquest/">Learn more</a> about the technology
+                                <a target="_blank" class="clickable" href="http://ufbteam.com/">Learn more</a> about the technology
                             </span>
                         </div>
                         <div class="right">
                             <div class="img"></div>
                             <p>
-                                BrowserQuest is available on Firefox, Chrome, Safari as well as iOS devices and Firefox for Android.
+                                <?php echo $lang['SUPPORTED_BROWSER'] ?>
                             </p>
                             <span class="link">
                                 <span class="ext-link"></span>
-                                <a target="_blank" class="clickable" href="http://github.com/browserquest/BrowserQuest">Grab the source</a> on Github
+                                <a target="_blank" class="clickable" href="https://github.com/hackziner/BrowserQuest">Grab the source</a> on Github
                             </span>
                         </div>
 	                    <div id="close-about">
-	                        <span>- click anywhere to close -</span>
+	                        <span><?php echo $lang['CLOSE_ANYWHERE'] ?></span>
                         </div>
     	            </article>
     	            <article id="death">
-                        <p>You are dead...</p>
+                        <p><?php echo $lang['PLAYER_DEATH'] ?></p>
     					<div id="respawn" class="button"></div>
     	            </article>
                     <article id="error">
@@ -235,7 +236,7 @@ include("common.php");
                              BrowserQuest stores your character name, game achievements and equipment in your browser and does not send them to Mozilla. We do collect server log data (such as IP address) as well as web analytics data. We handle info we receive about you as explained in our <a class="clickable" target="_blank" href="http://www.mozilla.org/en-US/privacy-policy">Privacy Policy</a>.
                          </p>
  	                    <div id="close-legal">
- 	                        <span>- click anywhere to close -</span>
+ 	                        <span><?php echo $lang['CLOSE_ANYWHERE'] ?></span>
                          </div>
                     </article>
 	            </div>
@@ -256,7 +257,7 @@ include("common.php");
 	                   <li><span class="icon"></span>Press ENTER to chat.</li>
 	                   <li><span class="icon"></span>Your character is automatically saved as you play.</li>
 	                </ul>
-	                    <p>- click anywhere to close -</p>
+	                    <p><?php echo $lang['CLOSE_ANYWHERE'] ?></p>
 		        </article>
 		        <article id="achievements" class="page1 clickable">
 		            <div class="close"></div>
