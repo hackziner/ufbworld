@@ -13,6 +13,16 @@ var Properties = {
         weapon: 1
     },
 
+    bee: {
+        drops: {
+            flask: 40
+        },
+        hp: 10,
+        armor: 1,
+        weapon: 1
+    },
+
+
     skeleton: {
         drops: {
             flask: 40,
