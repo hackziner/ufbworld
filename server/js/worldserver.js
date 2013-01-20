@@ -252,6 +252,7 @@ module.exports = World = cls.Class.extend({
         _.each(ids, function(id) {
             var entity = self.getEntityById(id);
             if(entity) {
+		log.debug("Going to Push "+entity.type + ":" + entity.kind  +" with id:  "+id);
                 self.pushToPlayer(player, new Messages.Spawn(entity));
             }
         });

@@ -11,6 +11,8 @@ root = etree.parse(tmx).getroot()
 el = root
 
 def process(el, tagname):
+ 
+    
     attrs = dict(el.attrib)
     for a in attrs.keys():
         if attrs[a].isdigit():
@@ -37,7 +39,8 @@ def process(el, tagname):
 
 res = process(el, True)
 
-dest.write(json.dumps(res))
+json.dump(res,dest)
+
 tmx.close()
 dest.close()
 

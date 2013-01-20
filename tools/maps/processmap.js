@@ -138,10 +138,10 @@ module.exports = function processMap(json, options) {
                 }
         
                 map.roamingAreas[i] = {  id: i,
-                                         x: areas[i].x / 16,
-                                         y: areas[i].y / 16,
-                                         width: areas[i].width / 16,
-                                         height: areas[i].height / 16,
+                                         x: Math.round(areas[i].x / 16),
+                                         y: Math.round(areas[i].y / 16),
+                                         width: Math.round(areas[i].width / 16),
+                                         height: Math.round(areas[i].height / 16),
                                          type: areas[i].type,
                                          nb: nb
                                        };
