@@ -299,8 +299,8 @@ include("common.php");
 					</div>
 					<div id="hitpoints">
 					</div>
-					<div id="weapon"></div>
-					<div id="armor"></div>
+					<div id="weapon" class="clickable"></div>
+					<div id="armor" class="clickable" ></div>
 					<div id="notifications">
 					    <div>
 					       <span id="message1"></span>

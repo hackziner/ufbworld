@@ -14,9 +14,10 @@ define(['mob', 'timer'], function(Mob, Timer) {
 
         Bee: Mob.extend({
             init: function(id) {
-                this._super(id, Types.Entities.Bee);
+                this._super(id, Types.Entities.BEE);
                 this.moveSpeed = 150;
-                this.idleSpeed = 700;
+                this.idleSpeed = 100;
+		this.walkSpeed = 100;
                 this.shadowOffsetY = -2;
                 this.isAggressive = false;
             }
