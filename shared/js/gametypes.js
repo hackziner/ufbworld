@@ -48,6 +48,8 @@ Types = {
         BOSS: 13,
         DEATHKNIGHT: 14,
 	BEE: 15,
+	FLUFFY: 16,
+	SPIDER: 17,
 
         // Armors
         FIREFOX: 20,
@@ -132,6 +134,9 @@ var kinds = {
     spectre: [Types.Entities.SPECTRE, "mob"],
     deathknight: [Types.Entities.DEATHKNIGHT, "mob"],
     crab: [Types.Entities.CRAB, "mob"],
+    spider: [Types.Entities.SPIDER, "mob"],
+    fluffy: [Types.Entities.FLUFFY, "mob"],
+
     snake: [Types.Entities.SNAKE, "mob"],
     bat: [Types.Entities.BAT, "mob"],
     wizard: [Types.Entities.WIZARD, "mob"],

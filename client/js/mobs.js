@@ -23,6 +23,30 @@ define(['mob', 'timer'], function(Mob, Timer) {
             }
         }),
 
+
+        Fluffy: Mob.extend({
+            init: function(id) {
+                this._super(id, Types.Entities.FLUFFY);
+                this.moveSpeed = 150;
+                this.idleSpeed = 200;
+                this.walkSpeed = 100;
+                this.shadowOffsetY = -2;
+                this.isAggressive = false;
+            }
+        }),
+
+        Spider: Mob.extend({
+            init: function(id) {
+                this._super(id, Types.Entities.SPIDER);
+                this.moveSpeed = 300;
+                this.idleSpeed = 100;
+                this.walkSpeed = 100;
+                this.shadowOffsetY = -2;
+                this.isAggressive = true;
+            }
+        }),
+
+
         Skeleton: Mob.extend({
             init: function(id) {
                 this._super(id, Types.Entities.SKELETON);

@@ -94,6 +94,29 @@ var Properties = {
         weapon: 1
     },
 
+    spider: {
+        drops: {
+            flask: 50,
+            axe: 20,
+            mailarmor: 10,
+            firepotion: 5
+        },
+        hp: 120,
+        armor: 2,
+        weapon: 2
+    },
+
+    fluffy: {
+        drops: {
+            flask: 95,
+            firepotion: 5
+        },
+        hp: 450,
+        armor: 1,
+        weapon: 1
+    },
+
+
     snake: {
         drops: {
             flask: 50,

@@ -32,6 +32,14 @@ define(['mobs', 'items', 'npcs', 'warrior', 'chest'], function(Mobs, Items, NPCs
         return new Mobs.Bee(id);
     };
 
+    EntityFactory.builders[Types.Entities.FLUFFY] = function(id) {
+        return new Mobs.Fluffy(id);
+    };
+
+    EntityFactory.builders[Types.Entities.SPIDER] = function(id) {
+        return new Mobs.Spider(id);
+    };
+
     EntityFactory.builders[Types.Entities.SKELETON] = function(id) {
         return new Mobs.Skeleton(id);
     };
