@@ -16,10 +16,16 @@ else:
 print commands.getoutput('./tmx2json.py '+SRC_FILE+' '+TEMP_FILE)
 
 # Map exporting
-print commands.getoutput('./exportmap.js '+TEMP_FILE+' '+DEST_FILE+' '+mode)
+if mode == 'all':
+	DEST_FILE = '../../client/maps/world_client'
+	print commands.getoutput('./exportmap.js '+TEMP_FILE+' '+DEST_FILE+' '+mode)
+	DEST_FILE = '../../server/maps/world_server.json'
+	print commands.getoutput('./exportmap.js '+TEMP_FILE+' '+DEST_FILE+' '+mode)
+else:
+	print commands.getoutput('./exportmap.js '+TEMP_FILE+' '+DEST_FILE+' '+mode)
 
 # Remove temporary JSON file
 print commands.getoutput('rm '+TEMP_FILE)
 
 # Send a Growl notification when the export process is complete
-print commands.getoutput('growlnotify --appIcon Tiled -name "Map export complete" -m "'+DEST_FILE+' was saved"')
+# print commands.getoutput('growlnotify --appIcon Tiled -name "Map export complete" -m "'+DEST_FILE+' was saved"')
