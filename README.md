@@ -2,7 +2,7 @@
 BrowserQuest http://ufbteam.com fork
 ====================================
 
-The test server is available on http://ufbteam.com:8050
+The test server is available on http://ufbworld.ufbteam.com
 
 If you are interested in the development please contact us on http://ufbteam.com
 
