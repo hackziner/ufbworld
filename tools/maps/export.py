@@ -18,9 +18,9 @@ print commands.getoutput('./tmx2json.py '+SRC_FILE+' '+TEMP_FILE)
 # Map exporting
 if mode == 'all':
 	DEST_FILE = '../../client/maps/world_client'
-	print commands.getoutput('./exportmap.js '+TEMP_FILE+' '+DEST_FILE+' '+mode)
+	print commands.getoutput('./exportmap.js '+TEMP_FILE+' '+DEST_FILE+' client')
 	DEST_FILE = '../../server/maps/world_server.json'
-	print commands.getoutput('./exportmap.js '+TEMP_FILE+' '+DEST_FILE+' '+mode)
+	print commands.getoutput('./exportmap.js '+TEMP_FILE+' '+DEST_FILE+' server')
 else:
 	print commands.getoutput('./exportmap.js '+TEMP_FILE+' '+DEST_FILE+' '+mode)
 

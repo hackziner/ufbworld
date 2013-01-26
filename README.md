@@ -2,6 +2,15 @@
 BrowserQuest http://ufbteam.com fork
 ====================================
 
+
+  _    _ ______ ______          __        _     _ 
+ | |  | |  ____|  _ \ \        / /       | |   | |
+ | |  | | |__  | |_) \ \  /\  / /__  _ __| | __| |
+ | |  | |  __| |  _ < \ \/  \/ / _ \| '__| |/ _` |
+ | |__| | |    | |_) | \  /\  / (_) | |  | | (_| |
+  \____/|_|    |____/   \/  \/ \___/|_|  |_|\__,_|
+ 
+
 The test server is available on http://ufbworld.ufbteam.com
 
 If you are interested in the development please contact us on http://ufbteam.com

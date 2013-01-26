@@ -44,3 +44,5 @@ Graphics:
 The following graphics have been borrowed from the game "The Mana World" and are under gpl licence:
 Monster: bee, fluffy, scorpion, spider, squirrel
 
+THe following items have been borrowed from the cern fork: particlequest:
+BatYellow
