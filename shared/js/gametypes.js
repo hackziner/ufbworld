@@ -47,10 +47,11 @@ Types = {
         SKELETON2: 12,
         BOSS: 13,
         DEATHKNIGHT: 14,
-	BEE: 15,
-	FLUFFY: 16,
-	SPIDER: 17,
-
+		BEE: 15,
+		FLUFFY: 16,
+		SPIDER: 17,
+		BATYELLOW: 18,
+		
         // Armors
         FIREFOX: 20,
         CLOTHARMOR: 21,
@@ -144,6 +145,7 @@ var kinds = {
     skeleton2: [Types.Entities.SKELETON2, "mob"],
     boss: [Types.Entities.BOSS, "mob"],
     bee: [Types.Entities.BEE, "mob"],
+	batyellow: [Types.Entities.BATYELLOW, "mob"],
 
     sword1: [Types.Entities.SWORD1, "weapon"],
     sword2: [Types.Entities.SWORD2, "weapon"],
