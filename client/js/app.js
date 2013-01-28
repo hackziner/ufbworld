@@ -39,7 +39,7 @@ define(['jquery', 'storage'], function($, Storage) {
             }
         },
 
-        tryStartingGame: function(username, starting_callback) {
+        tryStartingGame: function(username, password, starting_callback) {
             var self = this,
                 $play = this.$playButton;
 

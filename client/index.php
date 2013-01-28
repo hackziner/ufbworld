@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <!-- 
-
- , __                                   __                      
-/|/  \                                 /  \                     
- | __/ ,_    __           ,   _   ,_  | __ |          _   , _|_ 
- |   \/  |  /  \_|  |  |_/ \_|/  /  | |/  \|  |   |  |/  / \_|  
- |(__/   |_/\__/  \/ \/   \/ |__/   |_/\__/\_/ \_/|_/|__/ \/ |_/
-
+  _    _ ______ ______          __        _     _ 
+ | |  | |  ____|  _ \ \        / /       | |   | |
+ | |  | | |__  | |_) \ \  /\  / /__  _ __| | __| |
+ | |  | |  __| |  _ < \ \/  \/ / _ \| '__| |/ _` |
+ | |__| | |    | |_) | \  /\  / (_) | |  | | (_| |
+  \____/|_|    |____/   \/  \/ \___/|_|  |_|\__,_|
+                                                  
 Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworkshop.fr
 
 * Client libraries used: RequireJS, Underscore.js, jQuery, Modernizr
@@ -98,7 +98,7 @@ include("common.php");
 
                          <form action="none" method="get" accept-charset="utf-8">
                              <input type="text" id="nameinput" class="stroke" name="player-name" placeholder="Name your character" maxlength="15" autofocus>
-			     <input type="password" id="passwordinput" class="stroke" name="player-password" placeholder="Password" maxlength="16">
+			     <!--<input type="password" id="passwordinput" class="stroke" name="player-password" placeholder="Password" maxlength="16"> -->
                          </form>
                          <div class="play button disabled">
                              <div></div>

@@ -118,6 +118,10 @@ define(['jquery', 'app'], function($, App) {
                 app.toggleButton();
             });
 
+            $('#passwordinput').bind("keyup", function() {
+                app.toggleButton();
+            });
+
             $('#previous').click(function() {
                 var $achievements = $('#achievements');
 
@@ -175,7 +179,9 @@ define(['jquery', 'app'], function($, App) {
                     nameFromStorage = $('#playername').html(),
                     name = nameFromInput || nameFromStorage;
 
-                app.tryStartingGame(name);
+		var PasswordFromInput = $('#passwordinput').attr('value');
+
+                app.tryStartingGame(name,PasswordFromInput);
             });
 
             document.addEventListener("touchstart", function() {},false);
@@ -268,6 +274,7 @@ define(['jquery', 'app'], function($, App) {
             app.initHealthBar();
 
             $('#nameinput').attr('value', '');
+	    $('#passwordinput').attr('value', '');
             $('#chatbox').attr('value', '');
 
             if(game.renderer.mobile || game.renderer.tablet) {
@@ -462,9 +469,25 @@ define(['jquery', 'app'], function($, App) {
 
                 if(event.keyCode === 13) {
                     if(name !== '') {
-                        app.tryStartingGame(name, function() {
-                            $name.blur(); // exit keyboard on mobile
-                        });
+                        //app.tryStartingGame(name, function() {
+                        //    $name.blur(); // exit keyboard on mobile
+                        //});
+                        return false; // prevent form submit
+                    } else {
+                        return false; // prevent form submit
+                    }
+                }
+            });
+
+	    $('#passwordinput').keypress(function(event) {
+                var $password = $('#passwordinput'),
+                    password = $password.attr('value');
+
+                if(event.keyCode === 13) {
+                    if(password !== '') {
+                        //app.tryStartingGame(name, function() {
+                        //    $name.blur(); // exit keyboard on mobile
+                        //});
                         return false; // prevent form submit
                     } else {
                         return false; // prevent form submit
