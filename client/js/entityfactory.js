@@ -80,6 +80,10 @@ define(['mobs', 'items', 'npcs', 'warrior', 'chest'], function(Mobs, Items, NPCs
         return new Mobs.Bat(id);
     };
 
+    EntityFactory.builders[Types.Entities.YELLOWBAT] = function(id) {
+        return new Mobs.Yellowbat(id);
+    };
+
     EntityFactory.builders[Types.Entities.WIZARD] = function(id) {
         return new Mobs.Wizard(id);
     };

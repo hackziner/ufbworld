@@ -71,6 +71,7 @@ define(['text!../sprites/agent.json',
         'text!../sprites/target.json',
         'text!../sprites/villagegirl.json',
         'text!../sprites/villager.json',
+        'text!../sprites/yellowbat.json',
         'text!../sprites/wizard.json'], function() {
 
     var sprites = {};

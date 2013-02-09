@@ -161,6 +161,18 @@ define(['mob', 'timer'], function(Mob, Timer) {
             }
         }),
 
+        Yellowbat: Mob.extend({
+            init: function(id) {
+                this._super(id, Types.Entities.YELLOWBAT);
+                this.moveSpeed = 120;
+                this.atkSpeed = 90;
+                this.idleSpeed = 90;
+                this.walkSpeed = 85;
+                this.isAggressive = false;
+            }
+        }),
+
+
         Wizard: Mob.extend({
             init: function(id) {
                 this._super(id, Types.Entities.WIZARD);

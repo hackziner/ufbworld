@@ -50,7 +50,7 @@ Types = {
 		BEE: 15,
 		FLUFFY: 16,
 		SPIDER: 17,
-		BATYELLOW: 18,
+		YELLOWBAT: 18,
 		
         // Armors
         FIREFOX: 20,
@@ -140,12 +140,12 @@ var kinds = {
 
     snake: [Types.Entities.SNAKE, "mob"],
     bat: [Types.Entities.BAT, "mob"],
+    yellowbat: [Types.Entities.YELLOWBAT, "mob"],
     wizard: [Types.Entities.WIZARD, "mob"],
     eye: [Types.Entities.EYE, "mob"],
     skeleton2: [Types.Entities.SKELETON2, "mob"],
     boss: [Types.Entities.BOSS, "mob"],
     bee: [Types.Entities.BEE, "mob"],
-	batyellow: [Types.Entities.BATYELLOW, "mob"],
 
     sword1: [Types.Entities.SWORD1, "weapon"],
     sword2: [Types.Entities.SWORD2, "weapon"],
