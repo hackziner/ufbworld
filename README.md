@@ -41,9 +41,9 @@ How to get it going
 Getting the server up and running is pretty easy. You need to have the following installed:
 
 * Node.js (**v0.8.x** works, v0.6.x series should work, other versions are unknown - let us know if you test them!)
-* gcc-c++
-* GNU make
-* zlib-devel  <-- this is the Fedora/RHEL package name, others may be slightly different
+* gcc-c++ (optional - not needed on windows)
+* GNU make (optional - not needed on windows)
+* zlib-devel  <-- this is the Fedora/RHEL package name, others may be slightly different.  Not needed on windows.
 
 Clone the git repo:
 
@@ -95,6 +95,27 @@ On Fedora 16 and RHEL 6/CentOS 6, the rpms here are known to work:
 
 Note, those rpms are ugly, unofficial builds by [@justinclift](https://github.com/justinclift).  You are
 most welcome to improve on them. :)
+
+
+Mac OS X
+--------
+
+Node installed through Homebrew is known to work. i.e.:
+
+* git clone git://github.com/browserquest/BrowserQuest.git
+* cd BrowserQuest
+* brew install node
+* npm install -d
+* node server/js/main.js
+
+
+Windows
+-------
+
+Windows 8 is known to work ok with just the base Node v0.8.18
+installed, without Visual Studio, nor Python, nor the native
+extensions for npm modules installed.
+
 
 Documentation
 -------------

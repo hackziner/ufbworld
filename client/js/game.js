@@ -1,6 +1,6 @@
 ﻿define(['infomanager', 'bubble', 'renderer', 'map', 'animation', 'sprite', 'tile',
         'warrior', 'gameclient', 'audio', 'updater', 'transition', 'pathfinder',
-        'item', 'mob', 'npc', 'player', 'character', 'chest', 'mobs', 'exceptions', 'config', '../../shared/js/gametypes'],
+        'item', 'mob', 'npc', 'player', 'character', 'chest', 'mobs', 'exceptions', 'config',  '../../shared/js/gametypes'],
 function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedTile,
          Warrior, GameClient, AudioManager, Updater, Transition, Pathfinder,
          Item, Mob, Npc, Player, Character, Chest, Mobs, Exceptions, config) {
@@ -22,6 +22,10 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
 
             // Player
             this.player = new Warrior("player", "");
+            this.player.moveUp = false;
+            this.player.moveDown = false;
+            this.player.moveLeft = false;
+            this.player.moveRight = false;
 
             // Game state
             this.entities = {};
@@ -798,6 +802,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                     self.showNotification("Welcome back to BrowserQuest!");
                     self.storage.setPlayerName(name);
                 }
+
 
                 self.player.onStartPathing(function(path) {
                     var i = path.length - 1,
@@ -1658,7 +1663,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
             var msg;
 
             if(npc) {
-                msg = npc.talk();
+                msg = npc.talk(this);
                 this.previousClickPosition = {};
                 if(msg) {
                     this.createBubble(npc.id, msg);
@@ -1949,13 +1954,18 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
          * Moves the player one space, if possible
          */
         keys: function(pos, orientation) {
-            oldHoveringCollidingValue = this.hoveringCollidingTile;
             this.hoveringCollidingTile = false;
+            this.hoveringPlateauTile = false;
 
-            this.processInput(pos);
-            this.player.turnTo(orientation);
+            if((pos.x === this.previousClickPosition.x
+            && pos.y === this.previousClickPosition.y) || this.isZoning()) {
+                return;
+            } else {
+                this.previousClickPosition = pos;
+            }
 
-            this.hoveringCollidingTile = oldHoveringCollidingValue;
+            if(!this.player.isMoving())
+                this.processInput(pos);			
         },
 
         click: function()
@@ -2094,7 +2104,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
         onCharacterUpdate: function(character) {
             var time = this.currentTime,
                 self = this;
-
+            
             // If mob has finished moving to a different tile in order to avoid stacking, attack again from the new position.
             if(character.previousTarget && !character.isMoving() && character instanceof Mob) {
                 var t = character.previousTarget;

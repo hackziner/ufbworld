@@ -37,6 +37,8 @@ Many other people are contributing through GitHub:
 * Justin Clift [@justinclift](https://github.com/justinclift)
 * Brynn Bateman [@brynnb](https://github.com/brynnb)
 * Dylen Rivera [@dylenbrivera](https://github.com/dylenbrivera)
+* Mathieu Loiseau [@lzbk](https://github.com/lzbk)
+* Jason Culwell [@Mawgamoth](https://github.com/Mawgamoth)
 
 
 Graphics:
